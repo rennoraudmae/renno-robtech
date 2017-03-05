@@ -126,16 +126,31 @@ include_directories(
 # add_dependencies(beginner_tutorials ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(beginner_tutorials_node src/beginner_tutorials_node.cpp)
+add_executable(talker src/talker.cpp)
+
+target_link_libraries(talker ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(beginner_tutorials_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(talker beginner_tutorials_generate_messages_cpp)
+ 
+#add_dependencies(beginner_tutorials_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_executable(listener src/listener.cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(beginner_tutorials_node
-#   ${catkin_LIBRARIES}
-# )
+ target_link_libraries(listener
+   ${catkin_LIBRARIES}
+ )
+add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+add_dependencies(add_two_ints_server beginner_tutorials_gencpp)
+
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
 
 #############
 ## Install ##
