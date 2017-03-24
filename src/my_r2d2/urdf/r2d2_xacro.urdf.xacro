@@ -252,4 +252,14 @@
     <origin xyz="0 0 ${bodylen/2+wheeldiam+.1}"/>
   </joint>
 
+  <link name="eye">
+
+  </link>
+
+  <joint name="eye_to_box" type="fixed">
+    <parent link= "box" />
+    <child link= "eye" />
+    <origin xyz="0 0 0" rpy="1.57 3.14 1.57" />
+  </joint>
+
 </robot>
