@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: motoman_sia5d_support
+    relative_path: urdf/sia5d.xacro
+  SRDF:
+    relative_path: config/motoman_sia5d.srdf
+  CONFIG:
+    author_name: Renno Raudmae
+    author_email: renno.raudmae@ut.ee
+    generated_timestamp: 1495191432

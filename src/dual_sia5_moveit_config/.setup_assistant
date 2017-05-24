@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: dual_sia5d_support
+    relative_path: urdf/dualSia5d.xacro
+  SRDF:
+    relative_path: config/dualSia5d.srdf
+  CONFIG:
+    author_name: Renno
+    author_email: renno.raudmae@ut.ee
+    generated_timestamp: 1495613315
