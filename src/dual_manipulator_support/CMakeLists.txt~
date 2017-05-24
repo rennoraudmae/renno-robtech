@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(dual_manipulator_support)
+project(dual_sia5d_support)
 
 
 find_package(catkin REQUIRED COMPONENTS
@@ -26,8 +26,8 @@ include_directories(
 )
 
 
-add_executable(dualManipulator src/dualManipulator.cpp)
-target_link_libraries(dualManipulator ${catkin_LIBRARIES})
-add_dependencies(dualManipulator dual_manipulator_support_gencpp)
+add_executable(dualSia5d src/dualSia5d.cpp)
+target_link_libraries(dualSia5d ${catkin_LIBRARIES})
+add_dependencies(dualSia5d dual_sia5d_support_gencpp)
 
 
